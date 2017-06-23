@@ -25,11 +25,11 @@ Read the 'README' sheet and follow the instructions to add new languages if and 
 #### 3. Jot Down Sheet IDs
 * Take note of the Spreadsheet ID
     * e.g. the ID for the Translation Template Sheet is found in the URL
-    https://docs.google.com/spreadsheets/d/__**1xO96w8DqzW_feS5-uCVnKP9gj2ZOmklXW4io8M174HE**__/edit#gid=0
+    docs.google.com/spreadsheets/d/**1xO96w8DqzW_feS5-uCVnKP9gj2ZOmklXW4io8M174HE**/edit#gid=0
 * Take note of the Sheet ID for the default language
-    * e.g. the ID for 'en' is in the Translation Template Sheet is found in the URL when you are on that sheet https://docs.google.com/spreadsheets/d/1xO96w8DqzW_feS5-uCVnKP9gj2ZOmklXW4io8M174HE/edit#gid=__**1485390473**__
+    * e.g. the ID for 'en' is in the Translation Template Sheet is found in the URL when you are on that sheet    docs.google.com/spreadsheets/d/1xO96w8DqzW_feS5-uCVnKP9gj2ZOmklXW4io8M174HE/edit#gid=**1485390473**
 * Take note of the Sheet ID for each translated language
-    * e.g. the ID for 'fr' is__**765385960**__ and the ID for 'lang 3' is __**1859455466**__
+    * e.g. the ID for 'fr' is **765385960** and the ID for 'lang 3' is **1859455466**
 
 #### 4. Share
 * Go to **File** > **Share...** and set so that anyone with the link can view
