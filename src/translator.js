@@ -66,10 +66,11 @@ export default () => {
       }).on('done', (error) => {
         if (error) {
           console.log(`Error, no ${lang} translations were built.`);
+          return error;
         }
+        fs.writeFileSync(`${outputDir}${DEFAULT_LANG}.json`, `${JSON.stringify(messages(DEFAULT_LANG), null, 2)}`);
       });
     }
   });
-
-  fs.writeFileSync(`${outputDir}${DEFAULT_LANG}.json`, `${JSON.stringify(messages(DEFAULT_LANG), null, 2)}`);
+  return;
 };

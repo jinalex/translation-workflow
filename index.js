@@ -19,14 +19,15 @@ program
 program
   .command('build')
   .description('Build translations for react-intl')
-  .action(function () {build()});
+  .action(function () {
+    build()
+  });
 
 program
   .command('export')
   .description('Export current messages to Google Sheets')
   .action(function() {
     console.log('Exporting messages and translations...');
-    build()
     var exportMessages = require('./lib/exportMessages');
     exportMessages.default();
   });
