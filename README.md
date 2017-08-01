@@ -101,9 +101,18 @@ in .babelrc make sure the messagesDir is the same as the messages_path in lang.c
 
 #### Exporting Default Messages
 Run this when you've added new messages to your code for example a new label is added to a component.
+Make sure to run this only after you have built your languages first! Think of git, always make sure your local changes are up to date with remote (source of translations) before exporting i.e. pushing.
+0. Run ```translation build```
 1. Run ```translation export```
 2. Follow the Google API authentication process if prompted
 3. Request translations from your translator on Google Sheets
+
+#### Example npm Scripts
+Remember, always build before exporting.
+```
+    "build:langs": "translation build",
+    "export:langs": "translation build && translation export",
+```
 
 Issues and Tasks
 ----------------
