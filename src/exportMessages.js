@@ -27,11 +27,10 @@ const syncTranslations = (authClient, column = 'C') => {
     return null;
   } else {
     langs.shift();
-    sheets.spreadsheets.values.append({
+    sheets.spreadsheets.values.update({
       spreadsheetId: SPREADSHEET_ID,
       range: `All Messages!${column}2`,
       valueInputOption: 'RAW',
-      insertDataOption: 'OVERWRITE',
       resource: {
          range: `All Messages!${column}2`,
          majorDimension: 'COLUMNS',
@@ -99,7 +98,7 @@ const update = (authClient) => {
       return;
     }
     console.log(JSON.stringify(response, null, 2));
-    syncTranslations(authClient);
+    syncTranslations(authClient, 'C');
     });
   });
 };

@@ -3,6 +3,7 @@
 
 var path = require('path');
 var program = require('commander');
+var rimraf = require('rimraf');
 var config = require(path.join(path.resolve('.'), 'lang.conf.js'));
 
 function build () {
@@ -14,13 +15,16 @@ function build () {
 }
 
 program
-  .version('1.1.0')
+  .version('1.2.0')
 
 program
   .command('build')
   .description('Build translations for react-intl')
   .action(function () {
-    build()
+    var outputDir = path.join(path.resolve('.'), `${config.build_path}`);
+    rimraf(outputDir, () => {
+      build()
+    });
   });
 
 program
