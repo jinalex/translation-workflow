@@ -58,7 +58,7 @@ export default () => {
   langs.forEach((lang) => {
     const sheetId = config.translated_langs[lang].sheet_id;
     if (sheetId) {
-      csv({noheader: false})
+      csv({noheader: false, flatKeys: true})
       .fromStream(request.get(`https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}/export?format=csv&gid=${sheetId}`))
       .on('json', (json) => {
         languageCollections[lang] = json;
