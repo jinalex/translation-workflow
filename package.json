@@ -21,7 +21,7 @@
   "homepage": "https://github.com/ratehub/translation-workflow#readme",
   "dependencies": {
     "commander": "^2.9.0",
-    "csvtojson": "^1.1.7",
+    "csvtojson": "1.1.7",
     "google-auth-library": "^0.10.0",
     "googleapis": "^19.0.0",
     "object.values": "^1.0.4",
