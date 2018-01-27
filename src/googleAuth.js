@@ -21,7 +21,7 @@ export const authedCall = (call) => {
 
 export const authorize = (credentials, callback) => {
   const auth = new GoogleAuth();
-  const oauth2Client = new auth.OAuth2(credentials.web.client_id, credentials.web.client_secret, credentials.web.redirect_uri);
+  const oauth2Client = new auth.OAuth2(credentials.web.client_id, credentials.web.client_secret, credentials.web.redirect_uris[0]);
 
   // Check if we have previously stored a token.
   fs.readFile(TOKEN_PATH, (err, token) => {
